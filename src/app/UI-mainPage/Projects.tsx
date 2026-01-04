@@ -1,6 +1,8 @@
 "use client";
-import myImg from "@/img/photo_5956496783854734361_y.jpg";
-import myImgP1 from "@/img";
+import myImgP1 from "@/img/projOne.jpg";
+import myImgP2 from "@/img/projTwo.png";
+import myImgP3 from "@/img/projThree.jpg";
+import myImgP4 from "@/img/projFour.jpg";
 
 import ProjectsCardSample from "./ProjectsCardSample";
 
@@ -19,21 +21,27 @@ const Projects = () => {
             image={myImgP1.src}
           />
         </a>
-        <ProjectsCardSample
-          PName="Resume"
-          InformationOfProject="hello hi"
-          image={myImg.src}
-        />
-        <ProjectsCardSample
-          PName="Resume"
-          InformationOfProject="hello hi"
-          image={myImg.src}
-        />
-        <ProjectsCardSample
-          PName="Resume"
-          InformationOfProject="hello hi"
-          image={myImg.src}
-        />
+        <a href="https://github.com/aria390/Resume-Builder.git">
+          <ProjectsCardSample
+            PName="Resume Builder"
+            InformationOfProject="A resume building site with a dashboard"
+            image={myImgP2.src}
+          />
+        </a>
+        <a href="https://github.com/aria390/Car-Rental-react.git">
+          <ProjectsCardSample
+            PName="Car Rental"
+            InformationOfProject="A car rental site with animation"
+            image={myImgP3.src}
+          />
+        </a>
+        <a href="https://github.com/aria390/catch-me.git">
+          <ProjectsCardSample
+            PName="Catch The Insect"
+            InformationOfProject="A simple game written in js"
+            image={myImgP4.src}
+          />
+        </a>
       </div>
     </div>
   );
