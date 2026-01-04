@@ -11,16 +11,16 @@ const mySelf = () => {
 
   return (
     <section>
-      <div className="flex justify-center sm:w-90 sm:sticky sm:top-15">
-        <section className="text-white sm:w-100 flex flex-col items-center py-7 sm:px-12 px-10 gap-10 bg-[#0c0c0c] noise-gray rounded-2xl">
+      <div className="flex justify-center sm:w-90 sm:sticky sm:top-12">
+        <section className="text-white sm:w-100 flex flex-col items-center py-7 sm:px-12 px-10 gap-18 bg-[#0c0c0c] noise-gray rounded-2xl">
           <div className="flex flex-col gap-1 items-center">
             <div className="pb-4">
               <img className="w-60 h-75 rounded-2xl" src={myImg.src} alt="" />
             </div>
             <span className="text-3xl font-semibold">Aria Bahman-zangi</span>
-            <span>Front-end Developer</span>
-            <span>Iran,Tehran</span>
-            <ul className="flex gap-2 pt-3">
+            <span className="text-[#d9d9d9]">Front-end Developer</span>
+            <span className="text-[#d9d9d9]">Iran,Tehran</span>
+            <ul className="flex gap-2 pt-2">
               <li
                 onMouseEnter={() => {
                   setMouseOnIconeOne(true);

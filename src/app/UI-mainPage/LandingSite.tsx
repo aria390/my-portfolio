@@ -2,37 +2,59 @@ import React from "react";
 
 const LandingSite = () => {
   return (
-    <div className="text-white">
-      <div>
-        <span>
-          Transforming Your Ideas into <span>Reality</span>
+    <div className="text-white flex flex-col gap-5">
+      <div className="flex flex-col gap-3">
+        <span className="sm:text-6xl text-5xl sm:pr-50 sm:text-left font-bold text-center">
+          Transforming Your Ideas into
+          <span className="text-purple-700"> Reality</span>
         </span>
-        <span>
-          Passionate about creating intuitive and engaging user experiences.
-          Specialize in transforming ideas into beautifully crafted products.
+        <span className="text-[#d9d9d9] sm:text-left sm:pr-80 text-center">
+          Front-end developer focused on building clean, responsive, and
+          user-friendly web interfaces with modern technologies.
         </span>
       </div>
-      <div>
-        <div>
-          <div>
-            <span>+6 Month</span>
-            <span>YEARS OF EXPERIENCE</span>
+      <div className="flex flex-col gap-8">
+        <div className="flex sm:gap-16 gap-10">
+          <div className="flex flex-col gap-2">
+            <span className="sm:text-6xl text-5xl font-bold">+6</span>
+            <span className="text-[#d9d9d9]">
+              Month OF <br /> EXPERIENCE
+            </span>
           </div>
-          <div>
-            <span>+28</span>
-            <span>PROJECTS COMPLETED</span>
+          <div className="flex flex-col gap-2">
+            <span className="sm:text-6xl text-5xl font-bold">+28</span>
+            <span className="text-[#d9d9d9]">
+              PROJECTS <br /> COMPLETED
+            </span>
           </div>
-          <div>
-            <span>+1</span>
-            <span>WORLDWIDE CLIENTS</span>
+          <div className="flex flex-col gap-2">
+            <span className="sm:text-6xl text-5xl font-bold">+1</span>
+            <span className="text-[#d9d9d9]">
+              WORLDWIDE <br /> CLIENTS
+            </span>
           </div>
         </div>
-        <div className="flex">
+        <div className="flex gap-4 items-center justify-center sm:justify-start">
           <div className="bg-purple-700 noise px-12 py-2 rounded-md cursor-pointer">
             <button className="cursor-pointer">Let's Talk</button>
           </div>
-          <div>
+          <div className="cursor-pointer flex gap-1 group hover:gap-2 duration-200">
             <span>My Work</span>
+            <svg
+              fill="#000000"
+              width="25px"
+              height="25px"
+              viewBox="0 0 24 24"
+              id="right-arrow"
+              data-name="Flat Color"
+              xmlns="http://www.w3.org/2000/svg"
+              className="fill-white group-hover:fill-purple-700 duration-200"
+            >
+              <path
+                id="primary"
+                d="M21.71,11.29l-3-3a1,1,0,0,0-1.42,1.42L18.59,11H3a1,1,0,0,0,0,2H18.59l-1.3,1.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l3-3A1,1,0,0,0,21.71,11.29Z"
+              ></path>
+            </svg>
           </div>
         </div>
       </div>
