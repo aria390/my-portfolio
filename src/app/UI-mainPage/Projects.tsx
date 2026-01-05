@@ -4,7 +4,7 @@ import myImgP2 from "@/img/projTwo.png";
 import myImgP3 from "@/img/projThree.jpg";
 import myImgP4 from "@/img/projFour.jpg";
 
-import ProjectsCardSample from "./ProjectsCardSample";
+import ProjectsCardSample from "../../common-components/ProjectsCardSample";
 
 const Projects = () => {
   return (
@@ -13,7 +13,7 @@ const Projects = () => {
         Recent Projects and
         <span className="text-purple-700"> Achievements</span>
       </span>
-      <div className="grid sm:grid-cols-2 gap-5 sm:pr-16 grid-cols-1">
+      <div className="grid sm:grid-cols-2 gap-5 sm:pr-20 grid-cols-1">
         <a href="https://github.com/aria390/greencart_next.git">
           <ProjectsCardSample
             PName="GreenCart"

@@ -2,6 +2,7 @@
 import myImg from "@/img/photo_5956496783854734361_y.jpg";
 import clsx from "clsx";
 import { useState } from "react";
+import emailIcon from "@/img//emailicon2.jpg";
 
 const mySelf = () => {
   const [mouseOnIconeOne, setMouseOnIconeOne] = useState(false);
@@ -17,7 +18,7 @@ const mySelf = () => {
             <div className="pb-4">
               <img className="w-60 h-75 rounded-2xl" src={myImg.src} alt="" />
             </div>
-            <span className="text-3xl font-semibold">Aria Bahman-zangi</span>
+            <span className="text-3xl font-semibold">Aria Bahmanzangi</span>
             <span className="text-[#d9d9d9]">Front-end Developer</span>
             <span className="text-[#d9d9d9]">Iran,Tehran</span>
             <ul className="flex gap-2 pt-2">
@@ -31,7 +32,7 @@ const mySelf = () => {
                 className="cursor-pointer flex items-center justify-center relative"
               >
                 <svg
-                  className="z-1"
+                  className="z-1 fill-white hover:scale-110 duration-300"
                   fill="#000000"
                   width="30px"
                   height="30px"
@@ -61,7 +62,7 @@ const mySelf = () => {
                 className="cursor-pointer flex items-center justify-center relative"
               >
                 <svg
-                  className="z-1"
+                  className="z-1 fill-white hover:scale-110 duration-300"
                   fill="#000000"
                   width="30px"
                   height="30px"
@@ -93,7 +94,7 @@ const mySelf = () => {
                 className="cursor-pointer flex items-center justify-center relative"
               >
                 <svg
-                  className="z-1"
+                  className="z-1 fill-white rounded-full hover:scale-110 duration-300"
                   fill="#000000"
                   width="30px"
                   height="30px"
@@ -122,19 +123,11 @@ const mySelf = () => {
                 }}
                 className="cursor-pointer flex items-center justify-center relative"
               >
-                <svg
-                  className="z-1"
-                  width="30px"
-                  height="30px"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6zm3.519 0L12 11.671 18.481 6H5.52zM20 7.329l-7.341 6.424a1 1 0 0 1-1.318 0L4 7.329V18h16V7.329z"
-                    fill="#0D0D0D"
-                  />
-                </svg>
+                <img
+                  className="z-1 h-[30px] w-[30px] fill-white rounded-2xl hover:scale-110 duration-300"
+                  src={emailIcon.src}
+                  alt=""
+                />
                 <div
                   className={clsx(
                     "absolute bg-purple-700 noise w-9 h-9 rounded-md",
