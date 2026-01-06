@@ -1,3 +1,5 @@
+"use client";
+
 import ToolsCardSample from "@/common-components/ToolsCardSample";
 import React from "react";
 import reactImg from "@/img/react-icon.webp";
@@ -38,6 +40,16 @@ const Tools = () => {
             ToolDo="FrameWork"
           />
         </a>
+        <ToolsCardSample
+          image={reactImg.src}
+          TName="React"
+          ToolDo="FrameWork"
+        />
+        <ToolsCardSample
+          image={reactImg.src}
+          TName="React"
+          ToolDo="FrameWork"
+        />
       </div>
     </div>
   );
