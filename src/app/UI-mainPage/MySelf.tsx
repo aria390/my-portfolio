@@ -141,7 +141,7 @@ const mySelf = () => {
             </ul>
           </div>
           <div className="bg-purple-700 noise px-14 py-2 rounded-md cursor-pointer">
-            <button className="cursor-pointer">Let's Talk</button>
+            <button className="cursor-pointer">Get Resume</button>
           </div>
         </section>
       </div>

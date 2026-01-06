@@ -36,7 +36,7 @@ const LandingSite = () => {
         </div>
         <div className="flex gap-4 items-center justify-center sm:justify-start">
           <div className="bg-purple-700 noise px-12 py-2 rounded-md cursor-pointer">
-            <button className="cursor-pointer">Let's Talk</button>
+            <button className="cursor-pointer">About me</button>
           </div>
           <div className="cursor-pointer flex gap-1 group hover:gap-2 duration-200">
             <span>My Work</span>

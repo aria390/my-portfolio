@@ -23,6 +23,18 @@ body {
 .animeName {
   animation: animeName 0.3s ease-in-out both;
 }
+.animeSoftSkill {
+  animation: RowScroll 5s linear infinite;
+}
+
+@keyframes RowScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
 @keyframes animeHeader {
   from {

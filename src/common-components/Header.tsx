@@ -8,7 +8,7 @@ const Header = () => {
   const [mouseOneHome, setmouseonHome] = useState(false);
   const [mouseOneProjet, setmouseonProjet] = useState(false);
   const [mouseOneTool, setmouseonTool] = useState(false);
-  const [mouseOneExperimens, setmouseOneExperimens] = useState(false);
+  const [mouseOneAboutMe, setmouseOneAboutMe] = useState(false);
   const [mouseOneContant, setmouseOneContant] = useState(false);
 
   const { activeHeader, setActiveHeader } = useActiveHeader();
@@ -169,27 +169,28 @@ const Header = () => {
             setActiveHeader("Experience");
           }}
           onMouseEnter={() => {
-            setmouseOneExperimens(true);
+            setmouseOneAboutMe(true);
           }}
           onMouseLeave={() => {
-            setmouseOneExperimens(false);
+            setmouseOneAboutMe(false);
           }}
           className="flex items-center justify-center relative  cursor-pointer p-2 rounded-md"
         >
           <svg
+            className="z-10 fill-white"
+            fill="#000000"
+            width="24px"
+            height="24px"
+            viewBox="0 0 32 32"
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="rgb(255, 255, 255)"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="z-10"
           >
-            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            <title />
+
+            <g id="about">
+              <path d="M16,16A7,7,0,1,0,9,9,7,7,0,0,0,16,16ZM16,4a5,5,0,1,1-5,5A5,5,0,0,1,16,4Z" />
+
+              <path d="M17,18H15A11,11,0,0,0,4,29a1,1,0,0,0,1,1H27a1,1,0,0,0,1-1A11,11,0,0,0,17,18ZM6.06,28A9,9,0,0,1,15,20h2a9,9,0,0,1,8.94,8Z" />
+            </g>
           </svg>
           <div
             className={clsx(
@@ -197,8 +198,8 @@ const Header = () => {
               activeHeader === "Experience"
                 ? "bg-purple-700"
                 : {
-                    "visible anime": mouseOneExperimens === true,
-                    "invisible ": mouseOneExperimens === false,
+                    "visible anime": mouseOneAboutMe === true,
+                    "invisible ": mouseOneAboutMe === false,
                   }
             )}
           ></div>
@@ -206,63 +207,12 @@ const Header = () => {
             className={clsx(
               "absolute text-white text-[12px] font-semibold bg-[#28292A] rounded-sm px-2",
               {
-                "visible animeName": mouseOneExperimens === true,
-                "invisible ": mouseOneExperimens === false,
+                "visible animeName": mouseOneAboutMe === true,
+                "invisible ": mouseOneAboutMe === false,
               }
             )}
           >
-            <span>Experience</span>
-          </div>
-        </div>
-
-        <div
-          onClick={() => {
-            setActiveHeader("Contact");
-          }}
-          onMouseEnter={() => {
-            setmouseOneContant(true);
-          }}
-          onMouseLeave={() => {
-            setmouseOneContant(false);
-          }}
-          className="flex items-center justify-center relative  cursor-pointer p-2 rounded-md"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="rgb(255, 255, 255)"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="z-10"
-          >
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-            <polyline points="22,6 12,13 2,6"></polyline>
-          </svg>
-          <div
-            className={clsx(
-              "bg-purple-700 noise w-9 h-9 rounded-md absolute z-1",
-              activeHeader === "Contact"
-                ? "bg-purple-700"
-                : {
-                    "visible anime": mouseOneContant === true,
-                    "invisible ": mouseOneContant === false,
-                  }
-            )}
-          ></div>
-          <div
-            className={clsx(
-              "absolute text-white text-[12px] font-semibold bg-[#28292A] rounded-sm px-2",
-              {
-                "visible animeName": mouseOneContant === true,
-                "invisible ": mouseOneContant === false,
-              }
-            )}
-          >
-            <span>Contact</span>
+            <span>About</span>
           </div>
         </div>
       </section>
