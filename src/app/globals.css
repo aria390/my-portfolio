@@ -24,7 +24,7 @@ body {
   animation: animeName 0.3s ease-in-out both;
 }
 .animeSoftSkill {
-  animation: RowScroll 5s linear infinite;
+  animation: RowScroll 16s linear infinite;
 }
 
 @keyframes RowScroll {
@@ -32,7 +32,7 @@ body {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-280%);
   }
 }
 

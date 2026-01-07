@@ -1,9 +1,9 @@
 import { create } from "zustand";
 
 type TActiveHeader = {
-  activeHeader: "Home" | "Projects" | "Tools" | "Experience" | "Contact";
+  activeHeader: "Home" | "Projects" | "Tools" | "About" | "Contact";
   setActiveHeader: (
-    value: "Home" | "Projects" | "Tools" | "Experience" | "Contact"
+    value: "Home" | "Projects" | "Tools" | "About" | "Contact"
   ) => void;
 };
 

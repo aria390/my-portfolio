@@ -1,6 +1,11 @@
+"use client";
+
+import { useActiveHeader } from "@/Store/HeaderState";
+import Link from "next/link";
 import React from "react";
 
 const LandingSite = () => {
+  const { setActiveHeader } = useActiveHeader();
   return (
     <div className="text-white flex flex-col gap-5">
       <div className="flex flex-col gap-3">
@@ -35,9 +40,16 @@ const LandingSite = () => {
           </div>
         </div>
         <div className="flex gap-4 items-center justify-center sm:justify-start">
-          <div className="bg-purple-700 noise px-12 py-2 rounded-md cursor-pointer">
-            <button className="cursor-pointer">About me</button>
-          </div>
+          <Link
+            onClick={() => {
+              setActiveHeader("About");
+            }}
+            href="about"
+          >
+            <div className="bg-purple-700 noise px-12 py-2 rounded-md cursor-pointer">
+              <button className="cursor-pointer">About me</button>
+            </div>
+          </Link>
           <div className="cursor-pointer flex gap-1 group hover:gap-2 duration-200">
             <span>My Work</span>
             <svg
