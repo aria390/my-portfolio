@@ -3,6 +3,11 @@
 import ToolsCardSample from "@/common-components/ToolsCardSample";
 import React from "react";
 import reactImg from "@/img/react-icon.webp";
+import nextImg from "@/img/next-icon-2.png";
+import jsImg from "@/img/js-icon.png";
+import tsImg from "@/img/ts-icon-2.png";
+import tailwindImg from "@/img/tailwind-icon-2.png";
+import frameMotionImg from "@/img/framemotion-icon.png";
 import { motion } from "framer-motion";
 
 const Tools = () => {
@@ -18,36 +23,32 @@ const Tools = () => {
         Top-Tier
         <span className="text-purple-700"> Tools</span>
       </span>
-      <div className="grid sm:grid-cols-2 gap-5 sm:pr-20 grid-cols-1">
+      <div className="grid sm:grid-cols-2  gap-5 sm:pr-20 grid-cols-1">
         <ToolsCardSample
           image={reactImg.src}
           TName="React"
           ToolDo="FrameWork"
         />
+        <ToolsCardSample image={nextImg.src} TName="Next" ToolDo="FrameWork" />
         <ToolsCardSample
-          image={reactImg.src}
-          TName="React"
-          ToolDo="FrameWork"
+          image={jsImg.src}
+          TName="javascript"
+          ToolDo="Language"
         />
         <ToolsCardSample
-          image={reactImg.src}
-          TName="React"
-          ToolDo="FrameWork"
+          image={tsImg.src}
+          TName="typescript"
+          ToolDo="Language"
         />
         <ToolsCardSample
-          image={reactImg.src}
-          TName="React"
-          ToolDo="FrameWork"
+          image={tailwindImg.src}
+          TName="tailwind"
+          ToolDo="Style & animation"
         />
         <ToolsCardSample
-          image={reactImg.src}
-          TName="React"
-          ToolDo="FrameWork"
-        />
-        <ToolsCardSample
-          image={reactImg.src}
-          TName="React"
-          ToolDo="FrameWork"
+          image={frameMotionImg.src}
+          TName="framer-motion"
+          ToolDo="Style & animation"
         />
       </div>
     </motion.div>

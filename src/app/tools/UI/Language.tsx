@@ -1,7 +1,9 @@
 "use client";
 
 import ToolsCardSample from "@/common-components/ToolsCardSample";
-import reactImg from "@/img/react-icon.webp";
+import jsImg from "@/img/js-icon.png";
+import tsImg from "@/img/ts-icon-2.png";
+
 import { motion } from "framer-motion";
 
 const Language = () => {
@@ -18,14 +20,14 @@ const Language = () => {
       </span>
       <div className="grid sm:grid-cols-2 gap-5  grid-cols-1">
         <ToolsCardSample
-          image={reactImg.src}
-          TName="React"
-          ToolDo="FrameWork"
+          image={jsImg.src}
+          TName="javascript"
+          ToolDo="Language"
         />
         <ToolsCardSample
-          image={reactImg.src}
-          TName="React"
-          ToolDo="FrameWork"
+          image={tsImg.src}
+          TName="typescript"
+          ToolDo="Language"
         />
       </div>
     </motion.div>

@@ -5,6 +5,7 @@ import Header from "@/common-components/Header";
 import MySelf from "./UI-mainPage/MySelf";
 import Questions from "./UI-mainPage/Questions";
 import Footer from "@/common-components/Footer";
+import Background from "@/common-components/Background";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
+        <Background/>
         <section className="flex flex-col sm:relative sm:flex-row sm:pl-55 sm:px-30 sm:gap-18 gap-10 px-5">
           <MySelf />
           <div className="flex flex-col gap-10">

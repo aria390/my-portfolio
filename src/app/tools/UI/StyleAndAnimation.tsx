@@ -1,7 +1,9 @@
 "use client";
 
 import ToolsCardSample from "@/common-components/ToolsCardSample";
-import reactImg from "@/img/react-icon.webp";
+import tailwindImg from "@/img/tailwind-icon-2.png";
+import frameMotionImg from "@/img/framemotion-icon.png";
+
 import { motion } from "framer-motion";
 
 const StyleAndAnimation = () => {
@@ -18,14 +20,14 @@ const StyleAndAnimation = () => {
       </span>
       <div className="grid sm:grid-cols-2 gap-5  grid-cols-1">
         <ToolsCardSample
-          image={reactImg.src}
-          TName="React"
-          ToolDo="FrameWork"
+          image={tailwindImg.src}
+          TName="tailwind"
+          ToolDo="Style & animation"
         />
         <ToolsCardSample
-          image={reactImg.src}
-          TName="React"
-          ToolDo="FrameWork"
+          image={frameMotionImg.src}
+          TName="framer-motion"
+          ToolDo="Style & animation"
         />
       </div>
     </motion.div>

@@ -5,6 +5,7 @@ import { useActiveHeader } from "@/Store/HeaderState";
 import { useActiveProject } from "@/Store/ProjectSelect";
 import clsx from "clsx";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 // برای type-safe کردن headerها
@@ -14,6 +15,24 @@ const VALID_HEADERS: HeaderValue[] = ["Home", "Projects", "Tools", "About"];
 const Header = () => {
   const [mounted, setMounted] = useState(false); // برای hydration-safe
   const { activeHeader, setActiveHeader } = useActiveHeader();
+
+  const pathName = usePathname();
+  // console.log(pathName);
+
+  useEffect(() => {
+    if (pathName === "/about") {
+      setActiveHeader("About");
+    }
+    if (pathName === "/") {
+      setActiveHeader("Home");
+    }
+    if (pathName === "/tools") {
+      setActiveHeader("Tools");
+    }
+    if (pathName === "/projects") {
+      setActiveHeader("Projects");
+    }
+  }, [pathName]);
 
   const { SetactiveProject } = useActiveProject();
   const handleClickProject = (value: ProjectsValue) => {
@@ -102,7 +121,6 @@ const Header = () => {
           <div
             onClick={() => {
               handleClick("Projects");
-              handleClickProject("All");
             }}
             onMouseEnter={() => setmouseonProjet(true)}
             onMouseLeave={() => setmouseonProjet(false)}
@@ -152,6 +170,7 @@ const Header = () => {
           <div
             onClick={() => {
               handleClick("Tools");
+              handleClickProject("All");
             }}
             onMouseEnter={() => setmouseonTool(true)}
             onMouseLeave={() => setmouseonTool(false)}
