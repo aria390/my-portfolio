@@ -5,10 +5,17 @@ import myImgP3 from "@/img/projThree.jpg";
 import myImgP4 from "@/img/projFour.jpg";
 
 import ProjectsCardSample from "../../common-components/ProjectsCardSample";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
-    <div className="text-white flex flex-col items-center gap-8">
+    <motion.div
+      initial={{ opacity: 0,paddingTop:15 }}
+      transition={{ duration: 1.5, ease: "easeInOut" }}
+      whileInView={{ opacity: 1 ,paddingTop:0}}
+      viewport={{ once: true }}
+      className="text-white flex flex-col items-center gap-8 "
+    >
       <span className="sm:text-5xl text-4xl sm:text-left font-bold text-center sm:pr-80">
         Recent Projects and
         <span className="text-purple-700"> Achievements</span>
@@ -43,7 +50,7 @@ const Projects = () => {
           />
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

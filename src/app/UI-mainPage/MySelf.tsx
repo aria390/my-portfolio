@@ -1,12 +1,18 @@
 "use client";
 import myImg from "@/img/photo_5956496783854734361_y.jpg";
 import clsx from "clsx";
+import { motion } from "framer-motion";
 import { useState } from "react";
 
 const mySelf = () => {
   return (
-    <section>
-      <div className="flex justify-center sm:w-90 sm:sticky sm:top-12">
+    <motion.section
+      initial={{ opacity: 0, paddingTop: 15 }}
+      transition={{ duration: 1.5, ease: "easeInOut" }}
+      whileInView={{ opacity: 1, paddingTop: 0 }}
+      viewport={{ once: true }}
+    >
+      <div className="flex justify-center sm:w-90 sm:sticky sm:top-10">
         <section className="text-white sm:w-100 flex flex-col items-center py-7 sm:px-12 px-10 gap-18 bg-[#0c0c0c] noise-gray rounded-2xl">
           <div className="flex flex-col gap-1 items-center">
             <div className="pb-4">
@@ -78,7 +84,7 @@ const mySelf = () => {
           </div>
         </section>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

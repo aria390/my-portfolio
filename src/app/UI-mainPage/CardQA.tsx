@@ -46,7 +46,7 @@ function CardQA({ title, answer }: CardPropsType) {
           "mt-0": open === false,
         })}
       >
-        <p className="text-[#d9d9d9] text-sm">{answer}</p>
+        <p className="text-[#d9d9d9] text-sm ">{answer}</p>
       </motion.div>
     </div>
   );

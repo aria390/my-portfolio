@@ -33,7 +33,7 @@ export default function RootLayout({
         <Header />
         <section className="flex flex-col sm:relative sm:flex-row sm:pl-55 sm:px-30 sm:gap-18 gap-10 px-5">
           <MySelf />
-          <div className="flex flex-col">
+          <div className="flex flex-col gap-10">
             {children}
             <Questions />
           </div>

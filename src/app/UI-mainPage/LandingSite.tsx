@@ -1,13 +1,27 @@
 "use client";
 
 import { useActiveHeader } from "@/Store/HeaderState";
+import { easeInOut, motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
+type HeaderValue = "Home" | "Projects" | "Tools" | "About";
+const VALID_HEADERS: HeaderValue[] = ["Home", "Projects", "Tools", "About"];
 
 const LandingSite = () => {
   const { setActiveHeader } = useActiveHeader();
+
+  const handleClick = (value: HeaderValue) => {
+    setActiveHeader(value);
+    sessionStorage.setItem("activeHeader", value);
+  };
   return (
-    <div className="text-white flex flex-col gap-5">
+    <motion.div
+      initial={{ opacity: 0, paddingTop: 15 }}
+      transition={{ duration: 1.5, ease: "easeInOut" }}
+      whileInView={{ opacity: 1, paddingTop: 0 }}
+      viewport={{ once: true }}
+      className="text-white flex flex-col gap-5"
+    >
       <div className="flex flex-col gap-3">
         <span className="sm:text-6xl text-5xl sm:pr-50 sm:text-left font-bold text-center">
           Transforming Your Ideas into
@@ -42,7 +56,7 @@ const LandingSite = () => {
         <div className="flex gap-4 items-center justify-center sm:justify-start">
           <Link
             onClick={() => {
-              setActiveHeader("About");
+              handleClick("About");
             }}
             href="about"
           >
@@ -50,27 +64,34 @@ const LandingSite = () => {
               <button className="cursor-pointer">About me</button>
             </div>
           </Link>
-          <div className="cursor-pointer flex gap-1 group hover:gap-2 duration-200">
-            <span>My Work</span>
-            <svg
-              fill="#000000"
-              width="25px"
-              height="25px"
-              viewBox="0 0 24 24"
-              id="right-arrow"
-              data-name="Flat Color"
-              xmlns="http://www.w3.org/2000/svg"
-              className="fill-white group-hover:fill-purple-700 duration-200"
-            >
-              <path
-                id="primary"
-                d="M21.71,11.29l-3-3a1,1,0,0,0-1.42,1.42L18.59,11H3a1,1,0,0,0,0,2H18.59l-1.3,1.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l3-3A1,1,0,0,0,21.71,11.29Z"
-              ></path>
-            </svg>
-          </div>
+          <Link
+            href="projects"
+            onClick={() => {
+              handleClick("Projects");
+            }}
+          >
+            <div className="cursor-pointer flex gap-1 group hover:gap-2 duration-200">
+              <span>My Work</span>
+              <svg
+                fill="#000000"
+                width="25px"
+                height="25px"
+                viewBox="0 0 24 24"
+                id="right-arrow"
+                data-name="Flat Color"
+                xmlns="http://www.w3.org/2000/svg"
+                className="fill-white group-hover:fill-purple-700 duration-200"
+              >
+                <path
+                  id="primary"
+                  d="M21.71,11.29l-3-3a1,1,0,0,0-1.42,1.42L18.59,11H3a1,1,0,0,0,0,2H18.59l-1.3,1.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l3-3A1,1,0,0,0,21.71,11.29Z"
+                ></path>
+              </svg>
+            </div>
+          </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
