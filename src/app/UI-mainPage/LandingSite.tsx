@@ -4,16 +4,10 @@ import { useActiveHeader } from "@/Store/HeaderState";
 import { easeInOut, motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
-type HeaderValue = "Home" | "Projects" | "Tools" | "About";
-const VALID_HEADERS: HeaderValue[] = ["Home", "Projects", "Tools", "About"];
 
 const LandingSite = () => {
   const { setActiveHeader } = useActiveHeader();
 
-  const handleClick = (value: HeaderValue) => {
-    setActiveHeader(value);
-    sessionStorage.setItem("activeHeader", value);
-  };
   return (
     <motion.div
       initial={{ opacity: 0, paddingTop: 15 }}
@@ -54,22 +48,12 @@ const LandingSite = () => {
           </div>
         </div>
         <div className="flex gap-4 items-center justify-center sm:justify-start">
-          <Link
-            onClick={() => {
-              handleClick("About");
-            }}
-            href="about"
-          >
+          <Link href="about">
             <div className="bg-purple-700 noise px-12 py-2 rounded-md cursor-pointer">
               <button className="cursor-pointer">About me</button>
             </div>
           </Link>
-          <Link
-            href="projects"
-            onClick={() => {
-              handleClick("Projects");
-            }}
-          >
+          <Link href="projects">
             <div className="cursor-pointer flex gap-1 group hover:gap-2 duration-200">
               <span>My Work</span>
               <svg

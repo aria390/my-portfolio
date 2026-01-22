@@ -3,6 +3,7 @@ import FrameWorks from "./UI/FrameWorks";
 import Language from "./UI/Language";
 import StyleAndAnimation from "./UI/StyleAndAnimation";
 import Library from "./UI/Library";
+import DevOpsTool from "./UI/DevOpsTool";
 
 const page = () => {
   return (
@@ -11,6 +12,7 @@ const page = () => {
       <Language />
       <StyleAndAnimation />
       <Library />
+      <DevOpsTool/>
     </div>
   );
 };

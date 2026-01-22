@@ -12,10 +12,9 @@ const Questions = () => {
   });
   return (
     <motion.div
-      initial={{ opacity: 0,paddingTop:70 }}
+      initial={{ opacity: 0, paddingTop: 70 }}
       transition={{ duration: 1.5, ease: "easeInOut" }}
-      whileInView={{ opacity: 1 ,paddingTop:60}}
-      
+      whileInView={{ opacity: 1, paddingTop: 60 }}
       className=" flex flex-col h-full gap-8 pt-20 text-white"
     >
       <span className="text-4xl sm:text-5xl font-bold sm:text-left text-center sm:pr-90">

@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 type Project = {
   id: string;
@@ -23,7 +23,7 @@ async function getProjects(): Promise<Project[]> {
   return res.json();
 }
 
-const Projects = () => {
+const ReactNextProject = () => {
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -43,20 +43,19 @@ const Projects = () => {
   if (loading) {
     return <p>Loading...</p>;
   }
+
   return (
     <motion.div
       initial={{ opacity: 0, paddingTop: 15 }}
       transition={{ duration: 1.5, ease: "easeInOut" }}
       whileInView={{ opacity: 1, paddingTop: 0 }}
-      viewport={{ once: true }}
-      className="text-white flex flex-col items-center gap-8 "
+      className="grid sm:grid-cols-2  gap-5 sm:pr-20 grid-cols-1"
     >
-      <span className="sm:text-5xl text-4xl sm:text-left font-bold text-center sm:pr-80">
-        Recent Projects and
-        <span className="text-purple-700"> Achievements</span>
-      </span>
-      <div className="grid sm:grid-cols-2  gap-5 sm:pr-20 grid-cols-1">
-        {projects.slice(0, 4).map((project) => (
+      {projects
+        .filter((v) => {
+          return v.category === "Next" || v.category === "React";
+        })
+        .map((project) => (
           <div key={project.id} className="group">
             <div className="bg-[#0c0c0c] group-hover:scale-105 duration-300 noise-gray flex flex-col rounded-2xl w-80 cursor-pointer">
               <img
@@ -73,9 +72,8 @@ const Projects = () => {
             </div>
           </div>
         ))}
-      </div>
     </motion.div>
   );
 };
 
-export default Projects;
+export default ReactNextProject;

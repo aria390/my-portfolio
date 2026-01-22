@@ -3,6 +3,8 @@
 import ToolsCardSample from "@/common-components/ToolsCardSample";
 import tailwindImg from "@/img/tailwind-icon-2.png";
 import frameMotionImg from "@/img/framemotion-icon.png";
+import htmlImg from "@/img/html-icon.png";
+import cssImg from "@/img/css-icon.png";
 
 import { motion } from "framer-motion";
 
@@ -27,6 +29,16 @@ const StyleAndAnimation = () => {
         <ToolsCardSample
           image={frameMotionImg.src}
           TName="framer-motion"
+          ToolDo="Style & animation"
+        />
+        <ToolsCardSample
+          image={htmlImg.src}
+          TName="HTML"
+          ToolDo="Style & animation"
+        />
+        <ToolsCardSample
+          image={cssImg.src}
+          TName="CSS"
           ToolDo="Style & animation"
         />
       </div>

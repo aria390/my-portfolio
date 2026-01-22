@@ -1,0 +1,75 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+
+type Project = {
+  id: string;
+  title: string;
+  category: string;
+  description: string;
+  image: string;
+};
+
+async function getProjects(): Promise<Project[]> {
+  const res = await fetch("http://localhost:3000/api/projectsApi", {
+    cache: "no-store",
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch projects");
+  }
+
+  return res.json();
+}
+
+const AllProject = () => {
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    getProjects()
+      .then((data) => {
+        setProjects(data);
+      })
+      .catch((err) => {
+        console.error(err);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, paddingTop: 15 }}
+      transition={{ duration: 1.5, ease: "easeInOut" }}
+      whileInView={{ opacity: 1, paddingTop: 0 }}
+      className="grid sm:grid-cols-2  gap-5 sm:pr-20 grid-cols-1"
+    >
+      {projects.map((project) => (
+        <div key={project.id} className="group">
+          <div className="bg-[#0c0c0c] group-hover:scale-105 duration-300 noise-gray flex flex-col rounded-2xl w-80 cursor-pointer">
+            <img
+              className="w-80 h-50 rounded-t-2xl"
+              src={project.image}
+              alt=""
+            />
+            <div className="p-3 flex flex-col gap-2">
+              <span className="text-3xl group-hover:text-purple-700 duration-300 font-semibold">
+                {project.title}
+              </span>
+              <span className="text-[#d9d9d9] ">{project.category}</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </motion.div>
+  );
+};
+
+export default AllProject;

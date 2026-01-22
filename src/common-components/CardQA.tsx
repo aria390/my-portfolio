@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import clsx from "clsx";
+import { useActiveHeader } from "@/Store/HeaderState";
 
 interface CardPropsType {
   title: string;
@@ -10,7 +11,13 @@ interface CardPropsType {
 }
 
 function CardQA({ title, answer }: CardPropsType) {
+  const { activeHeader } = useActiveHeader();
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [activeHeader]);
+
   return (
     <div
       onClick={() => setOpen(!open)}

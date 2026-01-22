@@ -7,7 +7,7 @@ import nextImg from "@/img/next-icon-2.png";
 import jsImg from "@/img/js-icon.png";
 import tsImg from "@/img/ts-icon-2.png";
 import tailwindImg from "@/img/tailwind-icon-2.png";
-import frameMotionImg from "@/img/framemotion-icon.png";
+import githubImg from "@/img/github-icon.png";
 import { motion } from "framer-motion";
 
 const Tools = () => {
@@ -46,9 +46,9 @@ const Tools = () => {
           ToolDo="Style & animation"
         />
         <ToolsCardSample
-          image={frameMotionImg.src}
-          TName="framer-motion"
-          ToolDo="Style & animation"
+          image={githubImg.src}
+          TName="Git & Github"
+          ToolDo="DevOps"
         />
       </div>
     </motion.div>

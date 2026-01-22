@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/common-components/Header";
 import MySelf from "./UI-mainPage/MySelf";
-import Questions from "./UI-mainPage/Questions";
+import Questions from "../common-components/Questions";
 import Footer from "@/common-components/Footer";
 import Background from "@/common-components/Background";
 
@@ -32,7 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-        <Background/>
+        <Background />
         <section className="flex flex-col sm:relative sm:flex-row sm:pl-55 sm:px-30 sm:gap-18 gap-10 px-5">
           <MySelf />
           <div className="flex flex-col gap-10">

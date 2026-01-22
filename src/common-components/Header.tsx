@@ -8,12 +8,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-// برای type-safe کردن headerها
-type HeaderValue = "Home" | "Projects" | "Tools" | "About";
-const VALID_HEADERS: HeaderValue[] = ["Home", "Projects", "Tools", "About"];
-
 const Header = () => {
-  const [mounted, setMounted] = useState(false); // برای hydration-safe
   const { activeHeader, setActiveHeader } = useActiveHeader();
 
   const pathName = usePathname();
@@ -45,23 +40,6 @@ const Header = () => {
   const [mouseOneTool, setmouseonTool] = useState(false);
   const [mouseOneAboutMe, setmouseOneAboutMe] = useState(false);
 
-  // وقتی mount شد، مقدار قبلی از sessionStorage رو اعمال کن
-  useEffect(() => {
-    setMounted(true);
-    const saved = sessionStorage.getItem("activeHeader");
-    if (saved && VALID_HEADERS.includes(saved as HeaderValue)) {
-      setActiveHeader(saved as HeaderValue);
-    }
-  }, [setActiveHeader]);
-
-  // وقتی کاربر کلیک کرد، مقدار جدید رو ذخیره کن
-  const handleClick = (value: HeaderValue) => {
-    setActiveHeader(value);
-    sessionStorage.setItem("activeHeader", value);
-  };
-
-  if (!mounted) return null; // تا mount نشدن، چیزی render نشه → hydration-safe
-
   return (
     <div className="pt-8 justify-center flex pb-18">
       <section className="flex gap-3 px-4 p-1 bg-[#0c0c0c] noise-gray rounded-xl">
@@ -69,7 +47,7 @@ const Header = () => {
         <Link href="/">
           <div
             onClick={() => {
-              handleClick("Home");
+              setActiveHeader("Home");
               handleClickProject("All");
             }}
             onMouseEnter={() => setmouseonHome(true)}
@@ -120,7 +98,7 @@ const Header = () => {
         <Link href="projects">
           <div
             onClick={() => {
-              handleClick("Projects");
+              setActiveHeader("Projects");
             }}
             onMouseEnter={() => setmouseonProjet(true)}
             onMouseLeave={() => setmouseonProjet(false)}
@@ -169,7 +147,7 @@ const Header = () => {
         <Link href="tools">
           <div
             onClick={() => {
-              handleClick("Tools");
+              setActiveHeader("Tools");
               handleClickProject("All");
             }}
             onMouseEnter={() => setmouseonTool(true)}
@@ -219,7 +197,7 @@ const Header = () => {
         <Link href="about">
           <div
             onClick={() => {
-              handleClick("About");
+              setActiveHeader("About");
               handleClickProject("All");
             }}
             onMouseEnter={() => setmouseOneAboutMe(true)}

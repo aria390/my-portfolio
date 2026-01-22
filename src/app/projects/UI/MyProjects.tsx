@@ -1,14 +1,12 @@
 "use client";
-import myImgP1 from "@/img/projOne.jpg";
-import myImgP2 from "@/img/projTwo.png";
-import myImgP3 from "@/img/projThree.jpg";
-import myImgP4 from "@/img/projFour.jpg";
 
-import ProjectsCardSample from "@/common-components/ProjectsCardSample";
 import { motion } from "framer-motion";
 import { useActiveProject } from "@/Store/ProjectSelect";
 import clsx from "clsx";
 import { useEffect, useState } from "react";
+import AllProject from "./AllProject";
+import ReactNextProject from "./ReactNextProject";
+import TsJsProject from "./TsJsProject";
 
 export type ProjectsValue = "All" | "ReactAndNext" | "TsAndJs";
 export const VALID_PROJECT: ProjectsValue[] = [
@@ -41,7 +39,6 @@ const MyProjects = () => {
       initial={{ opacity: 0, paddingTop: 15 }}
       transition={{ duration: 1.5, ease: "easeInOut" }}
       whileInView={{ opacity: 1, paddingTop: 0 }}
-      viewport={{ once: true }}
       className="text-white flex flex-col items-center gap-12"
     >
       <div className="flex flex-col gap-5 sm:pr-20">
@@ -89,36 +86,9 @@ const MyProjects = () => {
           </button>
         </div>
       </div>
-      <div className="grid sm:grid-cols-2 gap-5 sm:pr-20 grid-cols-1">
-        <a href="https://github.com/aria390/greencart_next.git">
-          <ProjectsCardSample
-            PName="GreenCart"
-            InformationOfProject="A store site with next.js"
-            image={myImgP1.src}
-          />
-        </a>
-        <a href="https://github.com/aria390/Resume-Builder.git">
-          <ProjectsCardSample
-            PName="Resume Builder"
-            InformationOfProject="A resume building site with a dashboard"
-            image={myImgP2.src}
-          />
-        </a>
-        <a href="https://github.com/aria390/Car-Rental-react.git">
-          <ProjectsCardSample
-            PName="Car Rental"
-            InformationOfProject="A car rental site with animation"
-            image={myImgP3.src}
-          />
-        </a>
-        <a href="https://github.com/aria390/catch-me.git">
-          <ProjectsCardSample
-            PName="Catch The Insect"
-            InformationOfProject="A simple game written in js"
-            image={myImgP4.src}
-          />
-        </a>
-      </div>
+      {activeProject === "All" && <AllProject />}
+      {activeProject === "ReactAndNext" && <ReactNextProject />}
+      {activeProject === "TsAndJs" && <TsJsProject />}
     </motion.div>
   );
 };
