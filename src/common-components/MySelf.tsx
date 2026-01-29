@@ -21,7 +21,7 @@ const mySelf = () => {
   const copyInstagram = async () => {
     await navigator.clipboard.writeText(Instagram);
     setCopiedInsta(true);
-    setTimeout(() => setCopied(false), 1500);
+    setTimeout(() => setCopiedInsta(false), 1500);
   };
 
   return (
