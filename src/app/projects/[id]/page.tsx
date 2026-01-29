@@ -8,7 +8,7 @@ type PageProps = {
 };
 
 async function getProjectById(id: string): Promise<Project | undefined> {
-  const res = await fetch("http://localhost:3000/api/projectsApi", {
+  const res = await fetch("https://ariabz.netlify.app/api/projectsApi", {
     cache: "no-store",
   });
   if (!res.ok) throw new Error("Failed to fetch projects");
