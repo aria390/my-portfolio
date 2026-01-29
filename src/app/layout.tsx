@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/common-components/Header";
-import MySelf from "./UI-mainPage/MySelf";
+import MySelf from "../common-components/MySelf";
 import Questions from "../common-components/Questions";
 import Footer from "@/common-components/Footer";
 import Background from "@/common-components/Background";
