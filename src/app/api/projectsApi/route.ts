@@ -15,9 +15,9 @@ const projects: Project[] = [
     id: "1",
     title: "GreenCart",
     category: "Next",
-    description: "A store site with next.js",
+    description: "A store site with next.js ",
     image: "/img/projOne.jpg",
-    githubUrl: "",
+    githubUrl: "https://github.com/aria390/Go-Green.git",
     demoUrl: "",
   },
   {
@@ -26,7 +26,7 @@ const projects: Project[] = [
     category: "React",
     description: "A resume building site with a dashboard",
     image: "/img/projTwo.png",
-    githubUrl: "",
+    githubUrl: "https://github.com/aria390/Resume-Builder.git",
     demoUrl: "",
   },
   {
@@ -35,7 +35,7 @@ const projects: Project[] = [
     category: "React",
     description: "A car rental site with animation",
     image: "/img/projThree.jpg",
-    githubUrl: "",
+    githubUrl: "https://github.com/aria390/Car-Rental-react.git",
     demoUrl: "",
   },
   {
@@ -44,7 +44,7 @@ const projects: Project[] = [
     category: "js",
     description: "A simple game written in js",
     image: "/img/projFour.jpg",
-    githubUrl: "",
+    githubUrl: "https://github.com/aria390/catch-me-2-tamrin.git",
     demoUrl: "",
   },
   {
@@ -53,7 +53,7 @@ const projects: Project[] = [
     category: "React",
     description: "A react project with 18Next",
     image: "/img/proj-5.png",
-    githubUrl: "",
+    githubUrl: "https://github.com/aria390/hamrah-man.git",
     demoUrl: "",
   },
   {
@@ -62,7 +62,7 @@ const projects: Project[] = [
     category: "ts",
     description: "A ts project",
     image: "/img/proj-6.jpg",
-    githubUrl: "",
+    githubUrl: "https://github.com/aria390/Go-Green.git",
     demoUrl: "",
   },
   {
@@ -71,7 +71,7 @@ const projects: Project[] = [
     category: "ts",
     description: "A simple kanban with dark/light mode",
     image: "/img/proj-7.jpg",
-    githubUrl: "",
+    githubUrl: "https://github.com/aria390/kanban-type-script.git",
     demoUrl: "",
   },
   {
@@ -80,7 +80,7 @@ const projects: Project[] = [
     category: "js",
     description: "A js project",
     image: "/img/proj-8.jpg",
-    githubUrl: "",
+    githubUrl: "https://github.com/aria390/java-script-final-project.git",
     demoUrl: "",
   },
 ];

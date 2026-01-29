@@ -1,5 +1,6 @@
 "use client";
 
+import CommonButton from "@/common-components/CommonButton";
 import { useActiveHeader } from "@/Store/HeaderState";
 import { easeInOut, motion } from "framer-motion";
 import Link from "next/link";
@@ -49,9 +50,7 @@ const LandingSite = () => {
         </div>
         <div className="flex gap-4 items-center justify-center sm:justify-start">
           <Link href="about">
-            <div className="bg-purple-700 noise px-12 py-2 rounded-md cursor-pointer">
-              <button className="cursor-pointer">About me</button>
-            </div>
+            <CommonButton>About Me</CommonButton>
           </Link>
           <Link href="projects">
             <div className="cursor-pointer flex gap-1 group hover:gap-2 duration-200">

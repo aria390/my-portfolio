@@ -1,4 +1,5 @@
 "use client";
+import CommonButton from "@/common-components/CommonButton";
 import myImg from "@/img/photo_5956496783854734361_y.jpg";
 import clsx from "clsx";
 import { motion } from "framer-motion";
@@ -79,8 +80,8 @@ const mySelf = () => {
               </li>
             </ul>
           </div>
-          <div className="bg-purple-700 noise px-14 py-2 rounded-md cursor-pointer">
-            <button className="cursor-pointer">Get Resume</button>
+          <div>
+            <CommonButton>Get Resume</CommonButton>
           </div>
         </section>
       </div>

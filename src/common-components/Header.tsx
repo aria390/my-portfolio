@@ -15,19 +15,16 @@ const Header = () => {
   // console.log(pathName);
 
   useEffect(() => {
-    if (pathName === "/about") {
-      setActiveHeader("About");
-    }
     if (pathName === "/") {
       setActiveHeader("Home");
-    }
-    if (pathName === "/tools") {
+    } else if (pathName === "/about") {
+      setActiveHeader("About");
+    } else if (pathName === "/tools") {
       setActiveHeader("Tools");
-    }
-    if (pathName === "/projects") {
+    } else if (pathName.startsWith("/projects")) {
       setActiveHeader("Projects");
     }
-  }, [pathName]);
+  }, [pathName, setActiveHeader]);
 
   const { SetactiveProject } = useActiveProject();
   const handleClickProject = (value: ProjectsValue) => {
@@ -41,8 +38,8 @@ const Header = () => {
   const [mouseOneAboutMe, setmouseOneAboutMe] = useState(false);
 
   return (
-    <div className="pt-8 justify-center flex pb-18">
-      <section className="flex gap-3 px-4 p-1 bg-[#0c0c0c] noise-gray rounded-xl">
+    <div className="pt-8 justify-center flex pb-18 ">
+      <section className="flex gap-3 px-4 p-1 bg-[#0c0c0c] noise-gray rounded-xl sm:relative fixed z-50">
         {/* Home */}
         <Link href="/">
           <div
@@ -77,7 +74,7 @@ const Header = () => {
                   : {
                       "visible anime": mouseOneHome,
                       "invisible ": !mouseOneHome,
-                    }
+                    },
               )}
             ></div>
             <div
@@ -86,7 +83,7 @@ const Header = () => {
                 {
                   "visible animeName": mouseOneHome,
                   "invisible ": !mouseOneHome,
-                }
+                },
               )}
             >
               <span>Home</span>
@@ -95,7 +92,7 @@ const Header = () => {
         </Link>
 
         {/* Projects */}
-        <Link href="projects">
+        <Link href="/projects">
           <div
             onClick={() => {
               setActiveHeader("Projects");
@@ -126,7 +123,7 @@ const Header = () => {
                   : {
                       "visible anime": mouseOneProjet,
                       "invisible ": !mouseOneProjet,
-                    }
+                    },
               )}
             ></div>
             <div
@@ -135,7 +132,7 @@ const Header = () => {
                 {
                   "visible animeName": mouseOneProjet,
                   "invisible ": !mouseOneProjet,
-                }
+                },
               )}
             >
               <span>Projects</span>
@@ -144,7 +141,7 @@ const Header = () => {
         </Link>
 
         {/* Tools */}
-        <Link href="tools">
+        <Link href="/tools">
           <div
             onClick={() => {
               setActiveHeader("Tools");
@@ -176,7 +173,7 @@ const Header = () => {
                   : {
                       "visible anime": mouseOneTool,
                       "invisible ": !mouseOneTool,
-                    }
+                    },
               )}
             ></div>
             <div
@@ -185,7 +182,7 @@ const Header = () => {
                 {
                   "visible animeName": mouseOneTool,
                   "invisible ": !mouseOneTool,
-                }
+                },
               )}
             >
               <span>Tools</span>
@@ -194,7 +191,7 @@ const Header = () => {
         </Link>
 
         {/* About */}
-        <Link href="about">
+        <Link href="/about">
           <div
             onClick={() => {
               setActiveHeader("About");
@@ -225,7 +222,7 @@ const Header = () => {
                   : {
                       "visible anime": mouseOneAboutMe,
                       "invisible ": !mouseOneAboutMe,
-                    }
+                    },
               )}
             ></div>
             <div
@@ -234,7 +231,7 @@ const Header = () => {
                 {
                   "visible animeName": mouseOneAboutMe,
                   "invisible ": !mouseOneAboutMe,
-                }
+                },
               )}
             >
               <span>About</span>

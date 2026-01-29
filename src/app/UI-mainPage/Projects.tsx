@@ -41,7 +41,7 @@ const Projects = () => {
   }, []);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <p className="text-white py-30 text-center font-bold text-3xl">Loading...</p>;
   }
   return (
     <motion.div

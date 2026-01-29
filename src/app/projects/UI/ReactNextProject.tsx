@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 type Project = {
   id: string;
@@ -41,7 +42,11 @@ const ReactNextProject = () => {
   }, []);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return (
+      <p className="text-white py-30 text-center font-bold text-3xl">
+        Loading...
+      </p>
+    );
   }
 
   return (
@@ -57,19 +62,21 @@ const ReactNextProject = () => {
         })
         .map((project) => (
           <div key={project.id} className="group">
-            <div className="bg-[#0c0c0c] group-hover:scale-105 duration-300 noise-gray flex flex-col rounded-2xl w-80 cursor-pointer">
-              <img
-                className="w-80 h-50 rounded-t-2xl"
-                src={project.image}
-                alt=""
-              />
-              <div className="p-3 flex flex-col gap-2">
-                <span className="text-3xl group-hover:text-purple-700 duration-300 font-semibold">
-                  {project.title}
-                </span>
-                <span className="text-[#d9d9d9] ">{project.category}</span>
+            <Link href={`/projects/${project.id}`}>
+              <div className="bg-[#0c0c0c] group-hover:scale-105 duration-300 noise-gray flex flex-col rounded-2xl w-80 cursor-pointer">
+                <img
+                  className="w-80 h-50 rounded-t-2xl"
+                  src={project.image}
+                  alt=""
+                />
+                <div className="p-3 flex flex-col gap-2">
+                  <span className="text-3xl group-hover:text-purple-700 duration-300 font-semibold">
+                    {project.title}
+                  </span>
+                  <span className="text-[#d9d9d9] ">{project.category}</span>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
         ))}
     </motion.div>
