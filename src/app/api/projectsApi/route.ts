@@ -18,7 +18,7 @@ const projects: Project[] = [
     description:
       "A Next.js e-commerce project with dynamic routing and API integration including a shopping cart and user authentication with login and registration while the main challenges were handling dynamic routes and building a reliable cart system",
     image: "/img/projOne.jpg",
-    githubUrl: "https://github.com/aria390/Go-Green.git",
+    githubUrl: "https://github.com/aria390/greencart_next.git",
     demoUrl: "",
   },
   {
