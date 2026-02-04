@@ -129,7 +129,7 @@ const mySelf = () => {
           </div>
           <div>
             <CommonButton>
-              <a href="Blue Simple Professional CV Resume.pdf" download>
+              <a href="AriaBahmanzangi.pdf" download>
                 Get Resume
               </a>
             </CommonButton>
