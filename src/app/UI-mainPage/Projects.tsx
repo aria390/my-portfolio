@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import GlobalNotFound from "../global-not-found";
 
 type Project = {
   id: string;
