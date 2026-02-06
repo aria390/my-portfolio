@@ -49,19 +49,21 @@ const mySelf = () => {
                 </li>
               </Link>
 
-              <li className="cursor-pointer flex items-center justify-center relative">
-                <svg
-                  className="z-1 fill-white rounded-full hover:scale-110 duration-300"
-                  fill="#000000"
-                  width="30px"
-                  height="30px"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  data-name="Layer 1"
-                >
-                  <path d="M20.47,2H3.53A1.45,1.45,0,0,0,2.06,3.43V20.57A1.45,1.45,0,0,0,3.53,22H20.47a1.45,1.45,0,0,0,1.47-1.43V3.43A1.45,1.45,0,0,0,20.47,2ZM8.09,18.74h-3v-9h3ZM6.59,8.48h0a1.56,1.56,0,1,1,0-3.12,1.57,1.57,0,1,1,0,3.12ZM18.91,18.74h-3V13.91c0-1.21-.43-2-1.52-2A1.65,1.65,0,0,0,12.85,13a2,2,0,0,0-.1.73v5h-3s0-8.18,0-9h3V11A3,3,0,0,1,15.46,9.5c2,0,3.45,1.29,3.45,4.06Z" />
-                </svg>
-              </li>
+              <Link href="https://www.linkedin.com/in/ariabz-undefined-033863396?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BotUpneQUR%2BeljuHVOKieDA%3D%3D">
+                <li className="cursor-pointer flex items-center justify-center relative">
+                  <svg
+                    className="z-1 fill-white rounded-full hover:scale-110 duration-300"
+                    fill="#000000"
+                    width="30px"
+                    height="30px"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    data-name="Layer 1"
+                  >
+                    <path d="M20.47,2H3.53A1.45,1.45,0,0,0,2.06,3.43V20.57A1.45,1.45,0,0,0,3.53,22H20.47a1.45,1.45,0,0,0,1.47-1.43V3.43A1.45,1.45,0,0,0,20.47,2ZM8.09,18.74h-3v-9h3ZM6.59,8.48h0a1.56,1.56,0,1,1,0-3.12,1.57,1.57,0,1,1,0,3.12ZM18.91,18.74h-3V13.91c0-1.21-.43-2-1.52-2A1.65,1.65,0,0,0,12.85,13a2,2,0,0,0-.1.73v5h-3s0-8.18,0-9h3V11A3,3,0,0,1,15.46,9.5c2,0,3.45,1.29,3.45,4.06Z" />
+                  </svg>
+                </li>
+              </Link>
               <li
                 onClick={copyEmail}
                 className="cursor-pointer flex flex-col items-center justify-center relative"
@@ -93,7 +95,7 @@ const mySelf = () => {
           </div>
           <div>
             <CommonButton>
-              <a href="AriaBahmanzangi.pdf" download>
+              <a href="AriaBahmanzangi-Resume.pdf" download>
                 Get Resume
               </a>
             </CommonButton>
