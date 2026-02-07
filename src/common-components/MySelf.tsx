@@ -94,11 +94,9 @@ const mySelf = () => {
             </ul>
           </div>
           <div>
-            <CommonButton>
-              <a href="AriaBahmanzangi-Resume.pdf" download>
-                Get Resume
-              </a>
-            </CommonButton>
+            <a href="AriaBahmanzangi-Resume.pdf" download>
+              <CommonButton>Get Resume</CommonButton>
+            </a>
           </div>
         </section>
       </div>
