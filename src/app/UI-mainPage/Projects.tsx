@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import GlobalNotFound from "../global-not-found";
 
 type Project = {
   id: string;
@@ -75,7 +74,9 @@ const Projects = () => {
                   <span className="text-3xl group-hover:text-purple-700 duration-300 font-semibold">
                     {project.title}
                   </span>
-                  <span className="text-[#d9d9d9] ">{project.category}</span>
+                  <span className="text-[#d9d9d9] pb-2">
+                    {project.category}
+                  </span>
                 </div>
               </div>
             </Link>
