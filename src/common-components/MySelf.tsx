@@ -133,7 +133,7 @@ const mySelf = () => {
             </ul>
           </div>
           <div>
-            <a href="AriaBahmanzangi-Resume.pdf" download>
+            <a href="Resume-Aria-Bahmanzangi.pdf" download>
               <CommonButton>Get Resume</CommonButton>
             </a>
           </div>
