@@ -33,8 +33,8 @@ export default function RootLayout({
       >
         <Header />
         <Background />
-        <div className="flex justify-center ">
-          <section className="flex flex-col sm:relative sm:flex-row lg:flex-row justify-center sm:w-300 w-auto sm:gap-18 gap-10 xl:gap-16 px-5">
+        <div className="flex flex-col sm:items-center">
+          <section className="flex flex-col sm:relative sm:flex-row  sm:w-300 w-auto sm:gap-18 gap-10 xl:gap-16 px-5">
             <MySelf />
             <div className="flex flex-col gap-10">
               {children}
