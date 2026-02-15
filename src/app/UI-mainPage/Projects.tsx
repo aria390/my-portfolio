@@ -56,7 +56,7 @@ const Projects = () => {
       viewport={{ once: true }}
       className="text-white flex flex-col  md:items-start  lg:items-start items-center gap-8 "
     >
-      <span className="sm:text-5xl text-4xl sm:text-left font-bold text-center sm:pr-80">
+      <span className="sm:text-5xl text-4xl sm:text-left font-bold text-center">
         Recent Projects and
         <span className="text-purple-700"> Achievements</span>
       </span>

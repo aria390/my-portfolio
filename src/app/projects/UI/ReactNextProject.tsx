@@ -54,7 +54,7 @@ const ReactNextProject = () => {
       initial={{ opacity: 0, paddingTop: 15 }}
       transition={{ duration: 1.5, ease: "easeInOut" }}
       whileInView={{ opacity: 1, paddingTop: 0 }}
-      className="grid sm:grid-cols-2  gap-5 sm:pr-20 grid-cols-1"
+      className="grid xl:grid-cols-2 gap-5 justify-center px-5 xl:px-0 grid-cols-1"
     >
       {projects
         .filter((v) => {

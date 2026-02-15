@@ -41,7 +41,7 @@ const MyProjects = () => {
       whileInView={{ opacity: 1, paddingTop: 0 }}
       className="text-white flex flex-col  gap-12"
     >
-      <div className="flex flex-col gap-5 items-center sm:pr-20">
+      <div className="flex flex-col gap-5 items-center lg:pr-12 ">
         <span className="sm:text-5xl text-4xl text-center font-bold px-10">
           My
           <span className="text-purple-700"> Projects</span>

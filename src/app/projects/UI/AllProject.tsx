@@ -13,7 +13,7 @@ type Project = {
 };
 
 async function getProjects(): Promise<Project[]> {
-  const res = await fetch("http://localhost:3000/api/projectsApi", {
+  const res = await fetch("https://ariabz.netlify.app/api/projectsApi", {
     cache: "no-store",
   });
 

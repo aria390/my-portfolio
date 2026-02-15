@@ -19,7 +19,7 @@ const Tools = () => {
       viewport={{ once: true }}
       className="text-white flex flex-col items-center md:items-start lg:items-start gap-8"
     >
-      <span className="sm:text-5xl text-4xl sm:text-left font-bold text-center sm:pr-105">
+      <span className="sm:text-5xl text-4xl sm:text-left font-bold text-center">
         Top-Tier
         <span className="text-purple-700"> Tools</span>
       </span>

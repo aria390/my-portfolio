@@ -16,7 +16,7 @@ const ProjectClient = ({ project }: Props) => {
       transition={{ duration: 1.5, ease: "easeInOut" }}
       whileInView={{ opacity: 1, paddingTop: 0 }}
       viewport={{ once: true }}
-      className="text-white flex justify-center sm:pr-40 z-10"
+      className="text-white flex  z-10"
     >
       <div className="bg-[#0c0c0c] noise rounded-2xl sm:w-[650px] w-full overflow-hidden">
         <img
