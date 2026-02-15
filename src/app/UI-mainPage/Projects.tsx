@@ -43,7 +43,7 @@ const Projects = () => {
 
   if (loading) {
     return (
-      <p className="text-white py-30 text-center font-bold text-3xl">
+      <p className="text-white  py-30 text-center font-bold text-3xl">
         Loading...
       </p>
     );
@@ -54,7 +54,7 @@ const Projects = () => {
       transition={{ duration: 1.5, ease: "easeInOut" }}
       whileInView={{ opacity: 1, paddingTop: 0 }}
       viewport={{ once: true }}
-      className="text-white flex flex-col items-center gap-8 "
+      className="text-white flex flex-col  md:items-start  lg:items-start items-center gap-8 "
     >
       <span className="sm:text-5xl text-4xl sm:text-left font-bold text-center sm:pr-80">
         Recent Projects and

@@ -33,7 +33,7 @@ const mySelf = () => {
       viewport={{ once: true }}
     >
       <div className="flex justify-center sm:w-90 sm:sticky sm:top-10">
-        <section className="text-white sm:w-100 flex flex-col items-center py-7 sm:px-12 px-10 gap-18 bg-[#0c0c0c] noise-gray rounded-2xl">
+        <section className="text-white  sm:w-100 flex flex-col items-center py-7 sm:px-12 px-10 gap-18 bg-[#0c0c0c] noise-gray rounded-2xl">
           <div className="flex flex-col gap-1 items-center">
             <div className="pb-4">
               <img className="w-60 h-75 rounded-2xl" src={myImg.src} alt="" />

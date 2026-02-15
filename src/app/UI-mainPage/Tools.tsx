@@ -17,7 +17,7 @@ const Tools = () => {
       transition={{ duration: 1.5, ease: "easeInOut" }}
       whileInView={{ opacity: 1, paddingTop: 0 }}
       viewport={{ once: true }}
-      className="text-white flex flex-col items-center gap-8"
+      className="text-white flex flex-col items-center md:items-start lg:items-start gap-8"
     >
       <span className="sm:text-5xl text-4xl sm:text-left font-bold text-center sm:pr-105">
         Top-Tier
