@@ -41,45 +41,45 @@ const MyProjects = () => {
       whileInView={{ opacity: 1, paddingTop: 0 }}
       className="text-white flex flex-col  gap-12"
     >
-      <div className="flex flex-col gap-5 sm:pr-100">
+      <div className="flex flex-col gap-5 items-center sm:pr-20">
         <span className="sm:text-5xl text-4xl text-center font-bold px-10">
           My
           <span className="text-purple-700"> Projects</span>
         </span>
-        <div className="bg-[#0c0c0c] noise-gray rounded-xl flex gap-2 justify-around p-2  *:hover:text-purple-600 *:duration-300">
+        <div className="bg-[#0c0c0c] noise-gray rounded-xl flex gap-5 justify-around p-2 px-5  *:hover:text-purple-600 *:duration-300">
           <button
             onClick={() => {
               handleClick("All");
             }}
             className={clsx(
-              "sm:w-full cursor-pointer",
-              activeProject === "All" ? "text-purple-600" : "text-white"
+              "sm:w-fit cursor-pointer",
+              activeProject === "All" ? "text-purple-600" : "text-white",
             )}
           >
             All
           </button>
-          <div className="bg-white h-8 sm:w-1 w-0.5 mr-1"></div>
+          <div className="bg-white h-8  w-0.5 "></div>
           <button
             onClick={() => {
               handleClick("ReactAndNext");
             }}
             className={clsx(
-              "sm:w-full cursor-pointer",
+              "sm:w-fit cursor-pointer",
               activeProject === "ReactAndNext"
                 ? "text-purple-600"
-                : "text-white"
+                : "text-white",
             )}
           >
             React & Next
           </button>
-          <div className="bg-white h-8 sm:w-1 w-0.5 ml-1"></div>
+          <div className="bg-white h-8 w-0.5 "></div>
           <button
             onClick={() => {
               handleClick("TsAndJs");
             }}
             className={clsx(
-              "sm:w-full cursor-pointer",
-              activeProject === "TsAndJs" ? "text-purple-600" : "text-white"
+              "sm:w-fit cursor-pointer",
+              activeProject === "TsAndJs" ? "text-purple-600" : "text-white",
             )}
           >
             Ts & Js
