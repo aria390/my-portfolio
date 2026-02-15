@@ -39,10 +39,10 @@ const MyProjects = () => {
       initial={{ opacity: 0, paddingTop: 15 }}
       transition={{ duration: 1.5, ease: "easeInOut" }}
       whileInView={{ opacity: 1, paddingTop: 0 }}
-      className="text-white flex flex-col items-center gap-12"
+      className="text-white flex flex-col  gap-12"
     >
-      <div className="flex flex-col gap-5 sm:pr-20">
-        <span className="sm:text-5xl text-4xl font-bold text-center px-10">
+      <div className="flex flex-col gap-5 sm:pr-100">
+        <span className="sm:text-5xl text-4xl text-center font-bold px-10">
           My
           <span className="text-purple-700"> Projects</span>
         </span>
