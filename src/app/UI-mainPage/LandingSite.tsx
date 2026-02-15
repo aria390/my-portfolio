@@ -19,10 +19,10 @@ const LandingSite = () => {
     >
       <div className="flex flex-col gap-3">
         <span className="sm:text-6xl text-5xl  sm:text-left font-bold text-center">
-          Transforming Your Ideas into
+          Transforming Your <br /> Ideas into
           <span className="text-purple-700"> Reality</span>
         </span>
-        <span className="text-[#d9d9d9] sm:text-left sm:pr-50 text-center">
+        <span className="text-[#d9d9d9] sm:text-left sm:pr-70 text-center">
           Front-end developer focused on building clean, responsive, and
           user-friendly web interfaces with modern technologies.
         </span>
