@@ -17,7 +17,7 @@ const Questions = () => {
       whileInView={{ opacity: 1, paddingTop: 60 }}
       className=" flex flex-col h-full gap-8 pt-20 text-white"
     >
-      <span className="text-4xl sm:text-5xl font-bold sm:text-left text-center sm:pr-90">
+      <span className="text-4xl sm:text-5xl font-bold sm:text-left text-center sm:pr-65">
         Frequently Asked <span className="text-purple-700">Questions</span>
       </span>
       <div className="flex flex-col gap-4">
