@@ -20,7 +20,7 @@ const Questions = () => {
       <span className="text-4xl sm:text-5xl font-bold sm:text-left text-center sm:pr-65">
         Frequently Asked <span className="text-purple-700">Questions</span>
       </span>
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col items-center md:items-start lg:items-start gap-4">
         <CardQA
           answer="I try to understand the problem first instead of rushing to a solution. I debug step by step and prefer fixing the root cause rather than quick hacks."
           title="How do I deal with challenges or bugs in frontend development?"

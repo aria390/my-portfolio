@@ -31,8 +31,9 @@ const mySelf = () => {
       transition={{ duration: 1.5, ease: "easeInOut" }}
       whileInView={{ opacity: 1, paddingTop: 0 }}
       viewport={{ once: true }}
+      className=""
     >
-      <div className="flex justify-center sm:w-90 xl:sticky xl:top-10 2xl:top-20">
+      <div className="flex justify-center sm:w-90 md:sticky xl:sticky xl:top-20">
         <section className="text-white  sm:w-100 flex flex-col items-center py-7 sm:px-12 px-10 gap-18 bg-[#0c0c0c] noise-gray rounded-2xl">
           <div className="flex flex-col gap-1 items-center">
             <div className="pb-4">

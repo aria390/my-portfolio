@@ -2,7 +2,7 @@ import MyProjects from "./UI/MyProjects";
 
 const page = () => {
   return (
-    <div>
+    <div className="flex justify-center">
       <MyProjects />
     </div>
   );

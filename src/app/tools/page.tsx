@@ -8,7 +8,7 @@ import Testing from "./UI/Testing";
 
 const page = () => {
   return (
-    <div className="flex flex-col gap-10 ">
+    <div className="flex flex-col gap-10 md:items-center">
       <FrameWorks />
       <Language />
       <StyleAndAnimation />

@@ -13,7 +13,7 @@ type Project = {
 };
 
 async function getProjects(): Promise<Project[]> {
-  const res = await fetch("https://ariabz.netlify.app/api/projectsApi", {
+  const res = await fetch("http://localhost:3000/api/projectsApi", {
     cache: "no-store",
   });
 
@@ -54,7 +54,7 @@ const AllProject = () => {
       initial={{ opacity: 0, paddingTop: 15 }}
       transition={{ duration: 1.5, ease: "easeInOut" }}
       whileInView={{ opacity: 1, paddingTop: 0 }}
-      className="grid xl:grid-cols-2 gap-5 justify-center px-5 xl:px-0 grid-cols-1"
+      className="grid lg:grid-cols-2 gap-5 justify-center px-5 xl:px-0 grid-cols-1 md:grid-cols-2"
     >
       {projects.map((project) => (
         <div key={project.id} className="group">
