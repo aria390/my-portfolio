@@ -6,7 +6,6 @@ type PageProps = {
     id: string;
   }>;
 };
-
 async function getProjectById(id: string): Promise<Project | undefined> {
   const res = await fetch("https://ariabz.netlify.app/api/projectsApi", {
     cache: "no-store",
@@ -22,7 +21,7 @@ export default async function ProjectPage(props: PageProps) {
   const project = await getProjectById(id);
 
   if (!project) {
-    return <p className="text-white">Project not found</p>;
+    return <p className="text-white ">Project not found</p>;
   }
 
   // 👇 فقط رندر، بدون framer-motion

@@ -8,6 +8,7 @@ export type Project = {
   image: string;
   githubUrl: string;
   demoUrl: string;
+  skills?: string[];
 };
 
 const projects: Project[] = [
@@ -20,6 +21,12 @@ const projects: Project[] = [
     image: "/img/projOne.jpg",
     githubUrl: "https://github.com/aria390/greencart_next.git",
     demoUrl: "",
+    skills: [
+      "Dynamic routing",
+      "API Integration",
+      "Authentication",
+      "Shopping Cart",
+    ],
   },
   {
     id: "2",
@@ -30,6 +37,12 @@ const projects: Project[] = [
     image: "/img/projTwo.png",
     githubUrl: "https://github.com/aria390/Resume-Builder.git",
     demoUrl: "",
+    skills: [
+      "Authentication",
+      "API Integration",
+      "User Dashboard",
+      "Dynamic Display",
+    ],
   },
   {
     id: "3",
@@ -40,6 +53,7 @@ const projects: Project[] = [
     image: "/img/projThree.jpg",
     githubUrl: "https://github.com/aria390/Car-Rental-react.git",
     demoUrl: "",
+    skills: ["Animations", "Responsive Design", "API Integration"],
   },
   {
     id: "4",
@@ -50,6 +64,7 @@ const projects: Project[] = [
     image: "/img/projFour.jpg",
     githubUrl: "https://github.com/aria390/catch-me-2-tamrin.git",
     demoUrl: "",
+    skills: ["Game Development", "DOM Manipulation"],
   },
   {
     id: "5",
@@ -60,6 +75,7 @@ const projects: Project[] = [
     image: "/img/proj-5.png",
     githubUrl: "https://github.com/aria390/hamrah-man.git",
     demoUrl: "",
+    skills: ["i18next", "ApexCharts", "Swiper", "Mobile-First"],
   },
   {
     id: "6",
@@ -70,6 +86,7 @@ const projects: Project[] = [
     image: "/img/proj-6.jpg",
     githubUrl: "https://github.com/aria390/Go-Green.git",
     demoUrl: "",
+    skills: ["On-Scroll Animations", "Filtering", "Slider"],
   },
   {
     id: "7",
@@ -80,6 +97,7 @@ const projects: Project[] = [
     image: "/img/proj-7.jpg",
     githubUrl: "https://github.com/aria390/kanban-type-script.git",
     demoUrl: "",
+    skills: ["Kanban", "Dark/Light Mode"],
   },
   {
     id: "8",
@@ -90,6 +108,7 @@ const projects: Project[] = [
     image: "/img/proj-8.jpg",
     githubUrl: "https://github.com/aria390/java-script-final-project.git",
     demoUrl: "",
+    skills: ["Animations", "Responsive Design"],
   },
 ];
 

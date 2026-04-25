@@ -18,7 +18,7 @@ const ProjectClient = ({ project }: Props) => {
       viewport={{ once: true }}
       className="text-white flex  z-10"
     >
-      <div className="bg-[#0c0c0c] noise rounded-2xl sm:w-[650px] w-full overflow-hidden">
+      <div className="bg-[#0c0c0c] noise rounded-2xl  sm:w-[650px] w-full overflow-hidden">
         <img
           src={project.image}
           alt={project.title}
@@ -32,7 +32,16 @@ const ProjectClient = ({ project }: Props) => {
               {project.category}
             </span>
           </div>
-
+          <div className="flex flex-wrap gap-2">
+            {project.skills?.map((skill, index) => (
+              <span
+                key={index}
+                className="px-1.5 py-1  border-[0.5px] bg-purple-700 noise rounded-2xl text-sm text-center cursor-default"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
           <p className="text-[#d9d9d9]">{project.description}</p>
 
           <div className="flex gap-4 pt-2 items-center">
