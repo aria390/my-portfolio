@@ -4,7 +4,7 @@ import ToolsCardSample from "@/common-components/ToolsCardSample";
 import reactImg from "@/img/react-icon.webp";
 import zustandImg from "@/img/zustand-icon.png";
 import i18nextImg from "@/img/i18next-icon.png";
-import clsxImg from "@/img/clsx-icon.png";
+import reactLeafletImg from "@/img/reactLeaflet.png";
 import swiperImg from "@/img/swiper-icon.png";
 import apexChartImg from "@/img/apexchart-icon.png";
 import pwaImg from "@/img/pwa-icon.png";
@@ -53,7 +53,7 @@ const Library = () => {
             TName="i18Next"
             ToolDo="Library"
           />
-          <ToolsCardSample image={clsxImg.src} TName="clsx" ToolDo="Library" />
+          <ToolsCardSample image={reactLeafletImg.src} TName="react-leaflet" ToolDo="Library" />
           <ToolsCardSample
             image={swiperImg.src}
             TName="swiper"
