@@ -30,9 +30,9 @@ const LandingSite = () => {
       <div className="flex flex-col gap-8">
         <div className="flex justify-center lg:justify-start md:justify-start lg:gap-16 gap-10">
           <div className="flex flex-col gap-2">
-            <span className="sm:text-6xl text-5xl font-bold">+6</span>
+            <span className="sm:text-6xl text-5xl font-bold">+1</span>
             <span className="text-[#d9d9d9]">
-              Month OF <br /> EXPERIENCE
+              YEAR OF <br /> EXPERIENCE
             </span>
           </div>
           <div className="flex flex-col gap-2">
