@@ -2,6 +2,8 @@
 
 import ToolsCardSample from "@/common-components/ToolsCardSample";
 import VitestImg from "@/img/vitest.png";
+import ReactTestingLibrary from "@/img/reactTestingLibrary.png";
+
 import { motion } from "framer-motion";
 
 const FrameWorks = () => {
@@ -22,7 +24,11 @@ const FrameWorks = () => {
           TName="Vitest"
           ToolDo="Testing"
         />
-        
+        <ToolsCardSample
+          image={ReactTestingLibrary.src}
+          TName="React Testing Library"
+          ToolDo="Testing"
+        />
       </div>
     </motion.div>
   );
