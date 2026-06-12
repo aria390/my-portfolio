@@ -1,7 +1,6 @@
 "use client";
 
 import ToolsCardSample from "@/common-components/ToolsCardSample";
-import JestImg from "@/img/jest.png";
 import VitestImg from "@/img/vitest.png";
 import { motion } from "framer-motion";
 
@@ -23,7 +22,7 @@ const FrameWorks = () => {
           TName="Vitest"
           ToolDo="Testing"
         />
-        <ToolsCardSample image={JestImg.src} TName="Jest" ToolDo="Testing" />
+        
       </div>
     </motion.div>
   );
