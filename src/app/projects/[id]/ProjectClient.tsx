@@ -50,7 +50,7 @@ const ProjectClient = ({ project }: Props) => {
             </Link>
             {project.isDemo ? (
               <Link href={project.demoUrl}>
-                <CommonButton>GitHub</CommonButton>
+                <CommonButton>Demo</CommonButton>
               </Link>
             ) : (
               ""
