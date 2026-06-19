@@ -9,6 +9,7 @@ export type Project = {
   githubUrl: string;
   demoUrl: string;
   skills?: string[];
+  isDemo: boolean;
 };
 
 const projects: Project[] = [
@@ -27,6 +28,7 @@ const projects: Project[] = [
       "Authentication",
       "Shopping Cart",
     ],
+    isDemo: false,
   },
   {
     id: "2",
@@ -43,6 +45,7 @@ const projects: Project[] = [
       "User Dashboard",
       "Dynamic Display",
     ],
+    isDemo: false,
   },
   {
     id: "3",
@@ -54,6 +57,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/aria390/Car-Rental-react.git",
     demoUrl: "",
     skills: ["Animations", "Responsive Design", "API Integration"],
+    isDemo: false,
   },
   {
     id: "4",
@@ -65,6 +69,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/aria390/catch-me-2-tamrin.git",
     demoUrl: "",
     skills: ["Game Development", "DOM Manipulation"],
+    isDemo: false,
   },
   {
     id: "5",
@@ -76,6 +81,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/aria390/hamrah-man.git",
     demoUrl: "",
     skills: ["i18next", "ApexCharts", "Swiper", "Mobile-First"],
+    isDemo: false,
   },
   {
     id: "6",
@@ -87,6 +93,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/aria390/Go-Green.git",
     demoUrl: "",
     skills: ["On-Scroll Animations", "Filtering", "Slider"],
+    isDemo: false,
   },
   {
     id: "7",
@@ -98,6 +105,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/aria390/kanban-type-script.git",
     demoUrl: "",
     skills: ["Kanban", "Dark/Light Mode"],
+    isDemo: false,
   },
   {
     id: "8",
@@ -109,6 +117,18 @@ const projects: Project[] = [
     githubUrl: "https://github.com/aria390/java-script-final-project.git",
     demoUrl: "",
     skills: ["Animations", "Responsive Design"],
+    isDemo: false,
+  },
+  {
+    id: "9",
+    title: "AriaPaint",
+    category: "React",
+    description: "an easy paint without any libraries",
+    image: "/img/ariaPaintProject.PNG",
+    githubUrl: "https://github.com/aria390/ariaPaint.git",
+    demoUrl: "https://ariapaint.netlify.app/",
+    skills: ["Copy Paint"],
+    isDemo: true,
   },
 ];
 

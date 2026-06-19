@@ -48,6 +48,13 @@ const ProjectClient = ({ project }: Props) => {
             <Link href={project.githubUrl}>
               <CommonButton>GitHub</CommonButton>
             </Link>
+            {project.isDemo ? (
+              <Link href={project.demoUrl}>
+                <CommonButton>GitHub</CommonButton>
+              </Link>
+            ) : (
+              ""
+            )}
 
             <Link href="/projects">
               <div className="cursor-pointer flex gap-1 group hover:gap-2 duration-200">
